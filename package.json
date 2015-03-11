@@ -1,10 +1,10 @@
 {
-  "name": "cjsx-react-brunch",
+  "name": "cjsx-coffee-brunch",
   "version": "0.0.2",
   "description": "Adds CJSX support to brunch and compile the resulting CoffeeScript.",
   "author": "Mark Johnson",
   "license": "MIT",
-  "homepage": "https://github.com/wmdmark/cjsx-react-brunch",
+  "homepage": "https://github.com/wmdmark/cjsx-coffee-brunch",
   "keywords": [
     "react",
     "brunch",
@@ -15,14 +15,20 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:wmdmark/cjsx-react-brunch.git"
+    "url": "git@github.com:wmdmark/cjsx-coffee-brunch.git"
   },
   "main": "./lib/index",
   "scripts": {
-    "prepublish": "rm -rf lib && coffee --bare --output lib/ src/"
+    "prepublish": "rm -rf lib && coffee --bare --output lib/ src/",
+    "test": "coffee --bare --output lib/ src/ && mocha --compilers coffee:coffee-script/register --require test/common.js --colors"
   },
   "dependencies": {
     "coffee-script": "^1.7.1",
     "coffee-react-transform": "~2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "1.8.1",
+    "chai": "1.4.2",
+    "react": "~0.13.0"
   }
 }

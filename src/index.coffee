@@ -10,12 +10,11 @@ module.exports = class ReactCoffeeCompiler
   constructor: (@config) ->
     @includeHeader= @config?.plugins?.react?.autoIncludeCommentBlock is yes
 
-  compile: (params, callback) ->
+  compile: (data, path, callback) ->
     source = if @includeHeader
-        "# @cjsx React.DOM \n#{ params.data }"
+        "# @cjsx React.DOM \n#{ data }"
       else
-        params.data
-
+        data
     try
       output = transform(source)
       output = coffeescript.compile(output, {})
@@ -23,4 +22,5 @@ module.exports = class ReactCoffeeCompiler
       console.log "ERROR", err
       return callback err.toString()
 
-    callback null, data:output
+    result = "module.exports = #{output}"
+    callback(null, result)

@@ -1,8 +1,8 @@
-# Coffeescript JSX transform for brunch
+# Coffeescript JSX compile for brunch
 
-## coffee-react-brunch
+## cjsx-coffee-brunch
 Adds [React](http://facebook.github.io/react) support to [brunch](http://brunch.io)
-by automatically compiling `*.cjsx` files.
+by automatically compiling `*.cjsx` files to JavaScript.
 
 ### Optional
 

@@ -2,7 +2,7 @@ build:
 	npm run-script prepublish
 
 test:
-	npm run-script prepublish
+	npm run-script test
 
 publish:
 	npm publish
