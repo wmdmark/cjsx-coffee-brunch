@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "coffee-script": "^1.7.1",
-    "coffee-react-transform": "~2.0.0"
+    "coffee-react-transform": "~2.0.0",
+    "coffee-script-brunch": "~1.8.1"
   },
   "devDependencies": {
     "mocha": "1.8.1",

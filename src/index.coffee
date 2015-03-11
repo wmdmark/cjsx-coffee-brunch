@@ -17,10 +17,8 @@ module.exports = class ReactCoffeeCompiler
         data
     try
       output = transform(source)
-      output = coffeescript.compile(output, {})
+      output = coffeescript.compile(output, {bare: yes})
     catch err
       console.log "ERROR", err
       return callback err.toString()
-
-    result = "module.exports = #{output}"
-    callback(null, result)
+    callback(null, output)
