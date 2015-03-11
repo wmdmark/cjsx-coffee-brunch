@@ -1,6 +1,6 @@
 {
   "name": "cjsx-coffee-brunch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Adds CJSX support to brunch and compile the resulting CoffeeScript.",
   "author": "Mark Johnson",
   "license": "MIT",
