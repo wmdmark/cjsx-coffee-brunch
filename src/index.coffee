@@ -1,6 +1,7 @@
-transform= require('coffee-react-transform')
+transform = require('coffee-react-transform')
+coffeescript = require('coffee-script')
 
-module.exports = class ReactCompiler
+module.exports = class ReactCoffeeCompiler
   brunchPlugin: yes
   type: 'javascript'
   extension: 'cjsx'
@@ -17,7 +18,7 @@ module.exports = class ReactCompiler
 
     try
       output = transform(source)
-
+      output = coffeescript.compile(output, {})
     catch err
       console.log "ERROR", err
       return callback err.toString()
